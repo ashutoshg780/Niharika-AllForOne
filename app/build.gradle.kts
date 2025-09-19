@@ -1,5 +1,9 @@
 import org.gradle.kotlin.dsl.libs
 
+val org.gradle.api.provider.Provider<org.gradle.api.artifacts.MinimalExternalModuleDependency>.v3420: kotlin.Any
+
+
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -77,6 +81,8 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.firebase.ai)
+    implementation(libs.firebase.storage)
 
 //    implementation(libs.google.firebase.analytics.ktx)
 //    implementation(libs.google.firebase.crashlytics.ktx)
@@ -91,14 +97,14 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     // Import the BoM for the Firebase platform
-    implementation(platform("com.google.firebase:firebase-bom:33.16.0"))  // Firebase Authentication
+    implementation(libs.firebase.bom.v3420)  // Firebase Authentication
 
     // Declare the dependencies for the desired Firebase products without specifying versions
     // For example, declare the dependencies for Firebase Authentication and Cloud Firestore
 //    implementation("com.google.firebase:firebase-auth")
-    implementation("com.google.firebase:firebase-firestore") // Firestore ✅
-    implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.29")
-    implementation("com.firebaseui:firebase-ui-firestore:9.0.0")
+    implementation(libs.firebase.firestore) // Firestore ✅
+    implementation(libs.android.gif.drawable)
+    implementation(libs.firebase.ui.firestore)
 
 
     // Add the dependency for the Firebase Authentication library
@@ -119,6 +125,7 @@ dependencies {
     implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.29")
     implementation("com.google.firebase:firebase-storage-ktx")
     implementation ("com.google.firebase:firebase-storage-ktx")
+    implementation("com.google.firebase:firebase-ai:17.2.0")
 
     // ML Kit OCR
     implementation ("com.google.mlkit:text-recognition:16.0.1")

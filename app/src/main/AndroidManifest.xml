@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <!-- Permissions -->
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-
-    <!-- Let the system know camera is optional -->
-    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Let the system know camera is optional -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
     <application
         android:allowBackup="true"
@@ -21,6 +19,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
         tools:targetApi="31">
+        <activity
+            android:name=".Dashboard"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -35,63 +42,63 @@
         <activity
             android:name=".Approvals_Activity"
             android:exported="true"
-            android:theme="@style/Theme.Niharika_All_For_One"/>
+            android:theme="@style/Theme.Niharika_All_For_One" />
         <activity
             android:name=".Customer_List_Activity"
             android:exported="true"
-            android:theme="@style/Theme.Niharika_All_For_One"/>
+            android:theme="@style/Theme.Niharika_All_For_One" />
         <activity
             android:name=".Report_Generation_Activity"
             android:exported="true"
-            android:theme="@style/Theme.Niharika_All_For_One"/>
+            android:theme="@style/Theme.Niharika_All_For_One" />
         <activity
             android:name=".Detailed_Bill_Activity"
             android:exported="true"
-            android:theme="@style/Theme.Niharika_All_For_One"/>
+            android:theme="@style/Theme.Niharika_All_For_One" />
         <activity
             android:name=".Payouts_Activity"
             android:exported="true"
-            android:theme="@style/Theme.Niharika_All_For_One"/>
+            android:theme="@style/Theme.Niharika_All_For_One" />
         <activity
             android:name=".Attendance_Activity"
             android:exported="true"
-            android:theme="@style/Theme.Niharika_All_For_One"/>
+            android:theme="@style/Theme.Niharika_All_For_One" />
         <activity
             android:name=".Spare_Parts_Price_History_Activity"
             android:exported="true"
-            android:theme="@style/Theme.Niharika_All_For_One"/>
+            android:theme="@style/Theme.Niharika_All_For_One" />
         <activity
             android:name=".Spare_Parts_Price_Activity"
             android:exported="true"
-            android:theme="@style/Theme.Niharika_All_For_One"/>
+            android:theme="@style/Theme.Niharika_All_For_One" />
         <activity
             android:name=".Spare_Parts_Order_History_Activity"
             android:exported="true"
-            android:theme="@style/Theme.Niharika_All_For_One"/>
+            android:theme="@style/Theme.Niharika_All_For_One" />
         <activity
             android:name=".Spare_Parts_Order_Activity"
             android:exported="true"
-            android:theme="@style/Theme.Niharika_All_For_One"/>
+            android:theme="@style/Theme.Niharika_All_For_One" />
         <activity
             android:name=".Spare_Parts_Stock_Activity"
             android:exported="true"
-            android:theme="@style/Theme.Niharika_All_For_One"/>
+            android:theme="@style/Theme.Niharika_All_For_One" />
         <activity
             android:name=".Spare_Parts_Job_Activity"
             android:exported="true"
-            android:theme="@style/Theme.Niharika_All_For_One"/>
+            android:theme="@style/Theme.Niharika_All_For_One" />
         <activity
             android:name=".Spare_Parts_Used_Activity"
             android:exported="true"
-            android:theme="@style/Theme.Niharika_All_For_One"/>
+            android:theme="@style/Theme.Niharika_All_For_One" />
         <activity
             android:name=".Edit_Job_Activity"
             android:exported="true"
-            android:theme="@style/Theme.Niharika_All_For_One"/>
+            android:theme="@style/Theme.Niharika_All_For_One" />
         <activity
             android:name=".Job_Status_Activity"
             android:exported="true"
-            android:theme="@style/Theme.Niharika_All_For_One"/>
+            android:theme="@style/Theme.Niharika_All_For_One" />
         <activity
             android:name=".Jobs_List_Activity"
             android:exported="true"
@@ -123,7 +130,7 @@
         <activity
             android:name=".Profile_Activity"
             android:exported="true"
-            android:theme="@style/Theme.Niharika_All_For_One"/>
+            android:theme="@style/Theme.Niharika_All_For_One" />
         <activity
             android:name=".Dashboard_SuperAdmin_or_Owner_Activity"
             android:exported="true"
@@ -155,7 +162,7 @@
         <activity
             android:name=".Start_Screen_Activity"
             android:exported="true"
-            android:theme="@style/Theme.Niharika_All_For_One"/>
+            android:theme="@style/Theme.Niharika_All_For_One" />
         <activity
             android:name=".Splash_Activity"
             android:exported="true"
@@ -168,4 +175,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>

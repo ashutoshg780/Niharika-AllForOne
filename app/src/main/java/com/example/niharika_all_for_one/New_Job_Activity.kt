@@ -446,7 +446,7 @@ class New_Job_Activity : AppCompatActivity() {
         if (etContractNo.text.isBlank()) missing.add("Contract No")
         if (dataMake.text.isBlank()) missing.add("Make")
         if (dataSLNo.text.isBlank()) missing.add("SL No")
-        if (btnPurchaseDate.text == "01-01-1974") missing.add("Purchase Date")
+//        if (btnPurchaseDate.text == "01-01-1974") missing.add("Purchase Date")
         if (taIssueDescription.text.isBlank()) missing.add("Issue Description")
         if (radioWarrantyStatus.checkedRadioButtonId == -1) missing.add("Warranty Status")
         if (radioComplaintType.checkedRadioButtonId == -1) missing.add("Complaint Type")

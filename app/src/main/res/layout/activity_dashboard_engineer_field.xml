@@ -80,7 +80,7 @@
                 android:gravity="center"
                 android:paddingBottom="16dp">
 
-                <!-- Create New Job Card -->
+                <!-- Pending Job Card -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardJobsPending"
                     android:layout_width="150dp"
